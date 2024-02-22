@@ -1,0 +1,13 @@
+reset;
+
+model "linear.mod" ;
+data "linear.dat";
+option solver cplex;
+
+solve ;
+
+display x,y, obj;
+
+#model "linear.mod";
+#ampl: data "linear.dat";
+#ampl: include "linear.run";
